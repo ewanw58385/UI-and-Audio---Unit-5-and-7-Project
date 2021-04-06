@@ -155,7 +155,22 @@ MonoBehaviour:
   sounds:
   - name: StartClickEdited
     clip: {fileID: 8300000, guid: 00f364b944c7dc74a96625598b58c269, type: 3}
-    volume: 1
+    volume: 0.317
+    pitch: 1
+    source: {fileID: 0}
+  - name: ClickEdited
+    clip: {fileID: 8300000, guid: f2a8f4c45bfdb4a40ab619d9c7d7443b, type: 3}
+    volume: 0.317
+    pitch: 1
+    source: {fileID: 0}
+  - name: BackClickEdited
+    clip: {fileID: 8300000, guid: 6ad7d2a492b6c0f4086a5a894289b3e1, type: 3}
+    volume: 0.317
+    pitch: 1
+    source: {fileID: 0}
+  - name: StartClickEdited
+    clip: {fileID: 8300000, guid: 00f364b944c7dc74a96625598b58c269, type: 3}
+    volume: 0.317
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &329793273
@@ -269,6 +284,18 @@ MonoBehaviour:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ButtonAudioScript, Assembly-CSharp
         m_MethodName: PlayTestButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1656969511}
+        m_TargetAssemblyTypeName: AudioToggle, Assembly-CSharp
+        m_MethodName: PlayGeneralNavSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -843,6 +870,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1656969511}
+        m_TargetAssemblyTypeName: AudioToggle, Assembly-CSharp
+        m_MethodName: PlayBackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1153743111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,6 +1109,18 @@ MonoBehaviour:
           m_StringArgument: OptionsScene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1656969511}
+        m_TargetAssemblyTypeName: AudioToggle, Assembly-CSharp
+        m_MethodName: PlayGeneralNavSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1592531373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1118,6 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1656969510}
   - component: {fileID: 1656969509}
+  - component: {fileID: 1656969511}
   m_Layer: 0
   m_Name: UiManager
   m_TagString: Untagged
@@ -1151,6 +1203,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1656969511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656969508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd75b61f272a00b46bbdbb91dfa3ba3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1676939940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,6 +1685,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GameScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1656969511}
+        m_TargetAssemblyTypeName: AudioToggle, Assembly-CSharp
+        m_MethodName: PlayStartSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2088987431

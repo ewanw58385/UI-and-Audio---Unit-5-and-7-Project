@@ -13,6 +13,10 @@ public class Sound
     [Range(.1f, 3f)]
     public float pitch;
 
-    [HideInInspector]
-    public AudioSource source;
+	public AudioMixerGroup mixerGroup;
+
+	[HideInInspector]
+	public AudioSource source;
+
+	public bool sfx;
 }

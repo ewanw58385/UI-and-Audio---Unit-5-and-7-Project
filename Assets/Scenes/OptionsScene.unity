@@ -291,7 +291,7 @@ RectTransform:
   - {fileID: 894263175}
   - {fileID: 956572389}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -383,6 +383,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1581782246}
         m_TargetAssemblyTypeName: musicToggle, Assembly-CSharp
         m_MethodName: toggleMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1581782247}
+        m_TargetAssemblyTypeName: AudioToggle, Assembly-CSharp
+        m_MethodName: PlayGeneralNavSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -606,7 +618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -2.9, z: 0}
 --- !u!1 &470304612
 GameObject:
@@ -778,6 +790,123 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496560114}
   m_CullTransparentMesh: 0
+--- !u!1 &622297692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622297694}
+  - component: {fileID: 622297693}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &622297693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622297692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96a402df8f7f36641bc4262d2b689355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: StartClickEdited
+    clip: {fileID: 8300000, guid: 00f364b944c7dc74a96625598b58c269, type: 3}
+    volume: 0.317
+    pitch: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+    sfx: 0
+  - name: ClickEdited
+    clip: {fileID: 8300000, guid: f2a8f4c45bfdb4a40ab619d9c7d7443b, type: 3}
+    volume: 0.317
+    pitch: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+    sfx: 0
+  - name: BackClickEdited
+    clip: {fileID: 8300000, guid: 6ad7d2a492b6c0f4086a5a894289b3e1, type: 3}
+    volume: 0.317
+    pitch: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+    sfx: 0
+  - name: soundtrack
+    clip: {fileID: 8300000, guid: bd1562d2cec593d478189ade104fc238, type: 3}
+    volume: 0.317
+    pitch: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+    sfx: 0
+--- !u!4 &622297694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622297692}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1000, y: 500, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &817179867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 817179869}
+  - component: {fileID: 817179868}
+  m_Layer: 0
+  m_Name: frontend
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &817179868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817179867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a45b35c4e2815b4a8df8d093cb01689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 956572388}
+--- !u!4 &817179869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817179867}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1099.9949, y: 391.03366, z: -164.90945}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &824497049
 GameObject:
   m_ObjectHideFlags: 0
@@ -842,7 +971,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &894263174
 GameObject:
@@ -936,6 +1065,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: MenuScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1581782247}
+        m_TargetAssemblyTypeName: AudioToggle, Assembly-CSharp
+        m_MethodName: PlayBackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &894263177
@@ -1081,6 +1222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 956572389}
   - component: {fileID: 956572390}
+  - component: {fileID: 956572391}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1160,6 +1302,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &956572391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956572388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd9a9990f11d3ff428cdd604410e2101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &971147969
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1674,7 @@ Transform:
   m_Children:
   - {fileID: 1742155376}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!1 &1581782242
 GameObject:
@@ -1534,6 +1688,7 @@ GameObject:
   - component: {fileID: 1581782243}
   - component: {fileID: 1581782245}
   - component: {fileID: 1581782246}
+  - component: {fileID: 1581782247}
   m_Layer: 0
   m_Name: UiManager
   m_TagString: Untagged
@@ -1565,7 +1720,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1581782245
 MonoBehaviour:
@@ -1593,6 +1748,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicText: {fileID: 971147973}
+--- !u!114 &1581782247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581782242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd75b61f272a00b46bbdbb91dfa3ba3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1742155375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1927,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1581782245}
         m_TargetAssemblyTypeName: difficultyToggle, Assembly-CSharp
         m_MethodName: changeDiff
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1581782247}
+        m_TargetAssemblyTypeName: AudioToggle, Assembly-CSharp
+        m_MethodName: PlayGeneralNavSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

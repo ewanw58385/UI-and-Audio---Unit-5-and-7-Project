@@ -9,8 +9,6 @@ public class sceneManager : MonoBehaviour
     public void loadScene (string GameScene)
     {
         SceneManager.LoadScene(GameScene);
-
-        FindObjectOfType<AudioManager>().Play("StartClickEdited");
     }
             
         public void quitGame()
