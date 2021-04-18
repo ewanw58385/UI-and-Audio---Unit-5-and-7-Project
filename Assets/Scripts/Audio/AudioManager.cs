@@ -13,6 +13,9 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
+
+        DontDestroyOnLoad(gameObject);
+
         if (instance == null)
 		{
 			instance = this;
@@ -33,6 +36,11 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
         }
+    }
+
+    void Start()
+    {
+        Play("soundtrack", .3f);
     }
 
     public void Play (string name, float volume)

@@ -21,7 +21,6 @@ public class frontendScript : MonoBehaviour
         }
 
         musicSlider.GetComponent<Slider>().value = musicVol;  
-        AudioManager.instance.Play("soundtrack", musicVol);
         PlayerPrefs.SetFloat("musicvolume", musicVol);
     }
 

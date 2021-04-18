@@ -1,23 +1,32 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioToggle : MonoBehaviour
 {
+    public GameObject musicSlider;
+
     public void PlayStartSound()
     {
-    AudioManager.instance.Play("StartClickEdited", 1f);
-    }
+        float musicVolume = PlayerPrefs.GetFloat("musicvolume");
 
+        AudioManager.instance.SetVolume("StartClickEdited", musicVolume);
+        AudioManager.instance.Play("StartClickEdited", musicVolume);
+    }
 
     public void PlayGeneralNavSound()
     {
-    AudioManager.instance.Play("ClickEdited", 1f);
-    }
+        float musicVolume = PlayerPrefs.GetFloat("musicvolume");
 
+        AudioManager.instance.SetVolume("ClickEdited", musicVolume);
+        AudioManager.instance.Play("ClickEdited", musicVolume); //how do I set this value as the value from the slider manager? This is where the SFX is called from. 
+    }
 
     public void PlayBackSound()
     {
-    AudioManager.instance.Play("BackClickEdited", 1f);
+        float musicVolume = PlayerPrefs.GetFloat("musicvolume");
+        AudioManager.instance.SetVolume("BackClickEdited", musicVolume);
+        AudioManager.instance.Play("BackClickEdited", musicVolume);
     }
 }
